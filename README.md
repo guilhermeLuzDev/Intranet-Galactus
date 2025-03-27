@@ -137,9 +137,25 @@ Centraliza ramais telefônicos, agiliza o acesso a recursos e melhora a eficiên
        setor VARCHAR(50),
        escritorio VARCHAR(50)
    );
+
+
    CREATE TABLE usuario (
        id INT AUTO_INCREMENT PRIMARY KEY,
        usuario VARCHAR(50) NOT NULL UNIQUE,
        senha VARCHAR(255) NOT NULL,
        role ENUM('admin', 'usuario') NOT NULL
    );
+   
+3. Copie os arquivos PHP para o diretório do servidor (ex.: `/var/www/html`).
+4. Edite as credenciais em `db_config.php` (ex.: `PDO("mysql:host=localhost;dbname=ramal_db", "root", "")`).
+5. Acesse via `http://localhost/index.php` ou `http://localhost/loginti.php`.
+
+## 6. Fluxo de Uso
+
+- **Visitante**: Acessa `index.php` para links públicos.
+- **Usuário Autenticado**:
+  1. Faz login em `loginti.php`.
+  2. Gerencia ramais em `agenda.php` (criar, editar, excluir).
+  3. Acessa planilhas em `planilhas.php`.
+  4. Logout manual em `logout.php` ou automático após 15 minutos.
+- **Exemplo**: Um administrador cadastra um ramal em `cadastro.php`, edita em `editar.php` e verifica a lista em `agenda.php`.
