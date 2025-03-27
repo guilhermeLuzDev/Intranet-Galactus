@@ -1,0 +1,53 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa; /* Cor de fundo suave */
+}
+
+.container {
+    max-width: 500px; /* Ajuste da largura do formulário */
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do card */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.card-header img {
+    border-radius: 50%; /* Torna a logo redonda */
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Espaçamento entre os campos do formulário */
+}
+
+input[type="text"], input[type="password"] {
+    margin-bottom: 10px; /* Espaçamento entre os campos de input */
+    padding: 10px; /* Mais espaçamento dentro do input */
+    border-radius: 5px; /* Borda levemente arredondada */
+}
+
+button {
+    width: 100%; /* Faz o botão ocupar toda a largura */
+    padding: 10px;
+    margin-top: 10px;
+}
+
+a.btn-link {
+    display: block;
+    margin-top: 10px;
+    color: #6c757d;
+}
+
+
+
+
